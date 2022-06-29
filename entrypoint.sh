@@ -97,7 +97,7 @@ fi
 
 build_jekyll() {
   echo "Starting jekyll build"
-  JEKYLL_ENV=production bundle exec jekyll build \
+  JEKYLL_ENV=production JEKYLL_GITHUB_TOKEN=${TOKEN} bundle exec jekyll build \
     ${JEKYLL_BASEURL} \
     -c ${JEKYLL_CFG} \
     -d ${WORKING_DIR}/build
